@@ -1,0 +1,153 @@
+h2{
+font-size:45px;
+  font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+h4{
+font-size:30px;
+  font-family: 'Trebuchet MS', sans-serif;
+
+}
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+  
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  /*text-align: center;*/
+  color:rgb(0,0,0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+.liste
+{
+	font-family: 'Poppins',sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 15px;
+  background-color :violet;
+   border-radius: 100px;
+   padding-top:23px;
+   height: 60px;
+   width: 59px;
+   text-align: center;
+   color:white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+*
+{
+	margin:0;
+	padding:0;
+	font-family:'poppins',sans-serif;
+	
+}
+/*body
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height: 100vh;
+	flex-direction:column;
+	background:#040d15;
+}*/
+a
+{
+	position:relative;
+	display:inline-block;
+	padding: 12px 36px;
+	margin:10px 0;
+	color:#fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 2px;
+	border-radius: 40px;
+	overflow: hidden;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+	background: linear-gradient(90deg,#755bea,#ff72c0);
+	
+}
+/*a:nth-child(2)
+{
+	background:linear-gradient(90deg,#0162c8,#55e7fc);
+}*/
+span
+{
+	position:absolute;
+	background:#fff;
+	transform: translate(-50%,-50%);
+	pointer-events:none;
+	border-radius:50%;
+	animation: animate 1s linear infinite;
+}
+@keyframes animate
+
+{  0%  
+      {   
+	    Width:0px;
+	  }
+	   0%  
+      {   
+	    width: 0px ;
+		height: 0px ;
+		opacity:0.5;
+	  }
+      100%
+	  {
+		width:50px;
+		height:50px;
+		opacity:0;	  }
+
+}

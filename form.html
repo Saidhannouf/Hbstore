@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='form.css' type='text/css' />
+<script src="form.js"></script>
+</head>
+<body>
+<h1>Registration Form</h1>
+Use tab keys to move from one input field to the next.
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="username">Name:</label></li>
+<li><input type="text" name="username" size="50" /></li>
+<li><label for="usernamee">last Name:</label></li>
+<li><input type="text" name="usernamee" size="50" /></li>
+
+<li><label for="passid">tel:</label></li>
+<li><input type="tel" name="passid" size="12" /></li>
+
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" size="50" /></li>
+
+
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="50" /></li>
+
+
+<li><label for="desc">About:</label></li>
+<li><textarea name="desc" id="desc"></textarea></li>
+<li><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
+</body>
+</html>
+<form name='registration' onSubmit="return formValidation();">
+
+<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+<label for="username">Name:</label>
+<input class="w3-input w3-border" type="text" name="username" size="50" /></br>
+
+<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+<label for="usernamee">last Name:</label>
+<input class="w3-input w3-section w3-border" type="text" name="usernamee" size="50" />
+
+<i class="fa fa-phone" aria-hidden="true"></i>
+<label for="passid">tel:</label>
+<input class="w3-input w3-section w3-border" type="tel" name="passid" size="12" />
+
+<i class="fa fa-map-marker" aria-hidden="true"></i>
+<label for="address">Address:</label>
+<input class="w3-input w3-section w3-border"type="text" name="address" size="50" />
+
+<i class="fa fa-envelope" aria-hidden="true"></i>
+<label for="email">Email:</label>
+<input class="w3-input w3-section w3-border" type="text" name="email" size="50" />
+
+
+<label for="desc">About:</label>
+<textarea name="desc"rows ="10" cols="50"class="w3-input w3-section w3-border" id="desc"></textarea>
+<button class="w3-button w3-black w3-section" type="submit"value="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+</form><script src="form.js"></script>

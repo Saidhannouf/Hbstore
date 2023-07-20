@@ -1,0 +1,99 @@
+1 #include<stdio.h>
+2
+3 int main()
+4
+5
+6 { int nbaa;int codes;
+7
+8 typedef struct{char nom[20];
+9 float prix;
+10 int codes;
+11 int maxunite;
+12 int quantite;}article;
+13
+14
+15 article articles[3]={{"Lamp",1.5,1,10,0},{"TV",50.5,2,5,0},{"Remote",5.0,3,20,0}};
+16
+17
+18
+19 int testqtt(article a)
+20 {int b;
+21 printf("Quantite de %s au prix unitaire de %f?",a.nom,a.prix);
+22 scanf("%d",&b);
+23 if(b>a.maxunite)
+24
+25 do{
+26 printf("Pas acceptable!Donner une quantite inferieure ou egale a %d: ",a.maxunite);
+27 scanf("%d",&b);
+28 printf("\n");
+29 }
+30
+31 while(b>a.maxunite);
+32 return b;
+33
+34 }
+35
+36
+37
+38
+39
+40 int testcodes(int codes,article b[])
+41 {for(int i=0;i<3;i++)
+42 {
+43 if(codes==b[i].codes)
+44 {return i;
+45 }
+46 }
+47 return -1;
+48 }
+49
+50
+51 void affiche(article b[],int nbaa)
+52 {float total=0;
+53 printf("\t\tFACTURE\n");
+54 printf("ARTICLE\t NBRE\t P-UNITE\t MONTANT");
+55 printf("\n");
+56 for(int i=0;i<nbaa;i++)
+57 {
+58 printf("%s \t %d \t %f \t %f",b[i].nom,b[i].quantite,b[i].prix,b[i].quantite*b[i].prix);
+59 printf("\n");
+60 total+=b[i].quantite*b[i].prix;
+61 }
+62 printf(" TOTAL \t\t\t %f",total);
+63 printf("\n");
+64 printf("-----------------------------------------------");
+65 }
+6667
+68
+69 printf("Donner le nombre d'article a facturer?");
+70 scanf("%d",&nbaa);
+71 while(nbaa>3||nbaa<1)
+72 {
+73 printf("on a seulment 3 articles: 'lamp','tv','remote'\n");
+74 printf("redonnez le nombre d'article a facturer? ");
+75 scanf("%d",&nbaa);
+76 }
+77
+78 printf("\n\n");
+79
+80 for(int i=0;i<nbaa;i++)
+81 { printf("codes article?");
+82 scanf("%d",&codes);
+83 if(testcode(codes,articles)==-1)
+84 {do{printf("codes inextistant-redonnez le code: ");
+85 scanf("%d",&codes);
+86 }
+87 while(testcodes(codes,articles)==-1);
+88
+89 articles[i].quantite=testqtt(articles[testcodes(codes,articles)]);
+90 }
+91 else articles[i].quantite=testqtt(articles[testcodes(codes,articles)]);
+92
+93 }
+94
+95
+96 affiche(articles,nbaa);
+97
+98
+99 return 0;
+100 }
